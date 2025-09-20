@@ -1,0 +1,141 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mainNavegacion a {
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.mainNavegacion a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ff69b493;
+}
+
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: hsla(300, 43%, 89%, 0.856);
+    color: #222;
+    /* line-height: 1.6; */
+    /* padding: 2rem; */
+}
+
+
+.container {
+    /* margin: 0 auto; */
+    background: transparent;
+    /* border-radius: 10; */
+    /* box-shadow:none; */
+    /* padding: 0; */
+}
+
+/* Header */
+.site-header { width: 100%; background: hsl(300, 44%, 89%); margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 20; }
+.header-inner { display: flex; align-items: center; justify-content: flex-end; max-width: 1100px; margin: 0 auto; padding: 0.6rem 1rem; }
+.logo { font-size: 1.4rem; margin-right: auto; }
+.menu-toggle { display: none; font-size: 1.4rem; background: none; border: none; cursor: pointer; }
+.mainNavegacion { display: flex; gap: 1rem; align-items: center; font-family: 'Roboto', Arial, sans-serif;;}
+.mainNavegacion a { margin-left: 0; color: #222; text-decoration: none; padding: 0.25rem 0.6rem; font-size: 16px; font-weight: 500; letter-spacing: 0.6px; }
+.logo-img { height: 50px; width: auto; display: block; }
+/* Main layout */
+.main-content { padding: 2rem; background: hsl(300, 44%, 89%); border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.03); }
+.presentacion { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+.presentacion .foto img { border-radius: 8px; width: 180px; height: 180px; object-fit: cover; }
+.introduccion h2 { margin-bottom: 0.5rem; }
+
+.conocimientos ul { list-style: disc; margin-left: 1.5rem; }
+.proyecto { background: #fff; padding: 0.75rem; border-radius: 6px; margin-bottom: 0.5rem; }
+
+.contacto form { display: grid; gap: 0.5rem; }
+.contacto input, .contacto textarea { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+.contacto button { padding: 0.6rem 1rem; border:    none; background: #2d6cdf; color: white; border-radius: 4px; cursor: pointer; }
+.form-message { margin-top: 0.5rem; color: green; }
+
+.site-footer { text-align: center; margin-top: 1rem; font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 700px) {
+    .presentacion { flex-direction: column; text-align: center; }
+    .menu-toggle { display: inline-block; }
+    .mainNavegacion { display: none; }
+    .mainNavegacion.show { display: block; margin-top: 0.5rem; }
+    .mainNavegacion a { display: block; margin: 0.4rem 0; }
+    .container { padding: 1rem; }
+    .header-inner { padding: 0.6rem; }
+}
+
+.presentacion {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+
+  
+}
+
+
+
+.informacion {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.conocimientos {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.proyecto {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.redes {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.contacto {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Pulse animation for section headings */
+.main-content h3 {
+  display: inline-block; /* required so transform scales the heading itself */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color: #e8e8e8; }
+  100% { transform: scale(1); }
+}
+
+/* Respect user preference to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .main-content h3 { animation: none; }
+}
+
