@@ -173,13 +173,33 @@ body {
   font-size: 1.1rem;
 }
 
-.proyectos {
+/* .proyectos {
   min-height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   font-size: 1.1rem;
+} */
+.proyectos {
+    margin-top: 5rem;
+    min-height: 60vh;
+    gap: 20px;             
+    flex-wrap: wrap;        
+}
+
+.proyectos h3{
+    text-align: center ;
+    margin-bottom: 1rem;
+}
+
+.bloques-proyectos {
+    display: flex;   
+    flex: 1;                /* Hace que cada artículo ocupe proporcionalmente el mismo espacio */
+    min-width: 300px;       /* Evita que se achique demasiado en pantallas pequeñas */
+    text-align: center;
+    padding: 15px;          /* Espaciado interno */
+   
 }
 
 .redes {
