@@ -173,7 +173,7 @@ body {
   font-size: 1.1rem;
 }
 
-.proyecto {
+.proyectos {
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -198,3 +198,33 @@ body {
   font-size: 1.1rem;
 }
 
+.lista-conocimientos {
+  display: flex;           /* pone los bloques en fila */
+  flex-wrap: wrap;         /* baja a otra fila si no caben */
+  justify-content: center; /* centra los bloques */
+  gap: 2rem;               /* espacio entre cada bloque */
+  margin-top: 1rem;
+}
+
+.conocimiento {
+  display: flex;
+  flex-direction: column;  /* imagen arriba, texto abajo */
+  align-items: center;
+  text-align: center;
+  width: 120px;            /* ancho de cada bloque */
+}
+
+.conocimiento img {
+  width: 80px;
+  height: 70px;
+  margin-bottom: 0.5rem;
+  margin-top: 5rem;
+}
+
+/* Responsive: apila en columna en móvil */
+@media (max-width: 700px) {
+  .lista-conocimientos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
