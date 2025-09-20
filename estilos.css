@@ -11,13 +11,13 @@ html {
 
 .mainNavegacion a:hover {
   background: rgba(255, 255, 255, 0.2);
-  color: #ff69b493;
+  color: #4f0897da;
 }
 
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: hsla(300, 43%, 89%, 0.856);
+    background-color: hsla(0, 0%, 100%, 0.856);
     color: #222;
     /* line-height: 1.6; */
     /* padding: 2rem; */
@@ -33,15 +33,15 @@ body {
 }
 
 /* Header */
-.site-header { width: 100%; background: hsl(300, 44%, 89%); margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 20; }
-.header-inner { display: flex; align-items: center; justify-content: flex-end; max-width: 1100px; margin: 0 auto; padding: 0.6rem 1rem; }
+.site-header { width: 100%; background: hsl(0, 0%, 100%); margin-bottom: 1rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 20; }
+.header-inner { display: flex; align-items: center; justify-content: flex-end; max-width: 1100px; margin: 0 auto; padding: 0.5rem; }
 .logo { font-size: 1.4rem; margin-right: auto; }
 .menu-toggle { display: none; font-size: 1.4rem; background: none; border: none; cursor: pointer; }
 .mainNavegacion { display: flex; gap: 1rem; align-items: center; font-family: 'Roboto', Arial, sans-serif;;}
 .mainNavegacion a { margin-left: 0; color: #222; text-decoration: none; padding: 0.25rem 0.6rem; font-size: 16px; font-weight: 500; letter-spacing: 0.6px; }
 .logo-img { height: 50px; width: auto; display: block; }
 /* Main layout */
-.main-content { padding: 2rem; background: hsl(300, 44%, 89%); border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.03); }
+.main-content { padding: 0rem; background: hsl(0, 0%, 100%); border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.03); }
 .presentacion { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
 .presentacion .foto img { border-radius: 8px; width: 180px; height: 180px; object-fit: cover; }
 .introduccion h2 { margin-bottom: 0.5rem; }
@@ -74,18 +74,94 @@ body {
   justify-content: center;
   font-size: 1.1rem;
 
-  
+  /* full-bleed background: make section span full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+
+  background-image: url("imagen/fondo3.webp"); /* tu imagen */
+  background-size: cover;           /* que la imagen cubra todo */
+  background-position: center;      /* centrada */
+  background-repeat: no-repeat;
+  /* avoid fixed backgrounds on some mobile devices */
+  background-attachment: scroll;
+  padding: 3rem 0;
 }
 
+/* Constrain the inner columns so content doesn't stretch too wide */
+.presentacion > .foto,
+.presentacion > .introduccion,
+.presentacion .nombre-titulo {
+  max-width: 520px;
+  padding: 0 1rem;
+}
+
+/* overlay to improve text contrast */
+.presentacion {
+  --overlay-color: rgba(0,0,0,0.40);
+}
+.presentacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-color);
+  z-index: 0;
+}
+.presentacion > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Restore column layout on wider screens */
+@media (min-width: 900px) {
+  .presentacion { flex-direction: row; }
+}
+@media (max-width: 899px) {
+  .presentacion { flex-direction: column; text-align: center; }
+  .presentacion > .foto, .presentacion > .introduccion { max-width: 100%; }
+}
+
+.presentacion .nombre-titulo{
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);                     /* letras negras */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nombre-titulo h1 {
+  font-size: 1.2rem; /* mas pequeño */
+  font-weight: normal;
+  margin-bottom: 0.3rem;
+}
+
+.nombre-titulo h2 {
+  font-size: 3rem; /* mas grande */
+  font-weight: bold;
+}
 
 
 .informacion {
   min-height: 60vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   font-size: 1.1rem;
+  gap: 2rem;
+  padding: 1rem;
+}
+.informacion .texto img {
+  width: 50px; /* tamaño pequeño */
+  height: auto;
+}
+
+.informacion .imagen img {
+  width: 200px; 
+  height: auto;
 }
 
 .conocimientos {
@@ -120,22 +196,5 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-}
-
-/* Pulse animation for section headings */
-.main-content h3 {
-  display: inline-block; /* required so transform scales the heading itself */
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); color: #e8e8e8; }
-  100% { transform: scale(1); }
-}
-
-/* Respect user preference to reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  .main-content h3 { animation: none; }
 }
 
