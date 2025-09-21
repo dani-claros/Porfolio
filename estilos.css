@@ -23,11 +23,7 @@ body {
 
 
 .container {
-    /* margin: 0 auto; */
     background: transparent;
-    /* border-radius: 10; */
-    /* box-shadow:none; */
-    /* padding: 0; */
 }
 
 /* Header */
@@ -54,7 +50,7 @@ body {
 
 .site-footer { text-align: center; margin-top: 1rem; font-size: 0.9rem; }
 
-/* Responsive */
+
 @media (max-width: 700px) {
     .presentacion { flex-direction: column; text-align: center; }
     .menu-toggle { display: inline-block; }
@@ -72,7 +68,7 @@ body {
   justify-content: center;
   font-size: 1.1rem;
 
-  /* full-bleed background: make section span full viewport width */
+  
   position: relative;
   left: 50%;
   right: 50%;
@@ -80,24 +76,22 @@ body {
   margin-right: -50vw;
   width: 100vw;
 
-  background-image: url("imagen/fondo3.webp"); /* tu imagen */
-  background-size: cover;           /* que la imagen cubra todo */
-  background-position: center;      /* centrada */
+  background-image: url("imagen/fondo3.webp"); 
+  background-size: cover;         
+  background-position: center;    
   background-repeat: no-repeat;
-  /* avoid fixed backgrounds on some mobile devices */
+ /*movil*/
   background-attachment: scroll;
   padding: 3rem 0;
 }
 
-/* Constrain the inner columns so content doesn't stretch too wide */
-.presentacion > .foto,
+
 .presentacion > .introduccion,
 .presentacion .nombre-titulo {
   max-width: 520px;
   padding: 0 1rem;
 }
 
-/* overlay to improve text contrast */
 .presentacion {
   --overlay-color: rgba(0,0,0,0.40);
 }
@@ -113,7 +107,6 @@ body {
   z-index: 1;
 }
 
-/* Restore column layout on wider screens */
 @media (min-width: 900px) {
   .presentacion { flex-direction: row; }
 }
@@ -125,12 +118,12 @@ body {
 .presentacion .nombre-titulo{
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);                     /* letras negras */
+  color: rgb(255, 255, 255);                   
   margin-bottom: 1rem;
   text-align: center;
 }
 
-/* Estilo de la foto */
+
 .presentacion .foto img {
   width: 170px; 
   height: 170px;
@@ -141,13 +134,13 @@ body {
 }   
 
 .nombre-titulo h1 {
-  font-size: 1.2rem; /* mas pequeño */
+  font-size: 1.2rem; 
   font-weight: normal;
   margin-bottom: 0.3rem;
 }
 
 .nombre-titulo h2 {
-  font-size: 3rem; /* mas grande */
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -158,12 +151,11 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  /* font-size: 1.1rem; */
   gap: 2rem;
   padding: 1rem;
 }
 .informacion .texto img {
-  width: 50px; /* tamaño pequeño */
+  width: 50px; 
   height: auto;
 }
 
@@ -195,10 +187,10 @@ body {
 
 .bloques-proyectos {
     display: flex;   
-    flex: 1;                /* Hace que cada artículo ocupe proporcionalmente el mismo espacio */
-    min-width: 300px;       /* Evita que se achique demasiado en pantallas pequeñas */
+    flex: 1;               
+    min-width: 300px;       
     text-align: center;
-    padding: 15px;          /* Espaciado interno */
+    padding: 15px;       
    
 }
 
@@ -213,7 +205,7 @@ body {
 }
 
 .redes img {
-  width: 40px; /* tamaño pequeño */
+  width: 40px; 
   height: auto;
   margin-left: 0.5rem;
   margin: 2rem;
@@ -273,7 +265,6 @@ textarea {
   margin-top: 0.7em;
 }
 
-/* Responsive: apila en columna en móvil */
 @media (max-width: 700px) {
   .lista-conocimientos {
     flex-direction: column;
@@ -282,7 +273,7 @@ textarea {
 }
 
 .conocimiento:hover {
-  transform: translateY(-8px);   /* aca se eleva */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);  /*  sombra para dar efecto 3D */
-  background-color: #7f7fcf37;     /*cambia color al hover si querés */
+  transform: translateY(-8px);  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);  
+  background-color: #7f7fcf37;    
 }
