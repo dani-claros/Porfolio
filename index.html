@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Portfolio Dana</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -29,7 +27,7 @@
     <main class="container main-content">
         <section id="presentacion" class="presentacion">
             <div class="foto">
-                <!-- <img src=" https://placehold.co/300x300?text=Foto+perfil" alt="Foto de perfil"> -->
+                <img src="imagen/fotoPerfil.jpeg" alt="Foto de perfil">
             </div>
             <div class="nombre-titulo">
                 <h1>Estudiante de Programacion</h1>
@@ -39,11 +37,11 @@
 
         <section id="informacion" class="informacion">
              <div class="texto">
-             <h3>Sobre mi...</h3>
+             <h3>Sobre mí...</h3>
             
                     
-              <p>Soy del partido de Tigre de Buenos Aires. Tengo 22 años, y cuento con conocimientos en ingles intermedio (B1). 
-                Me dedico a enseñar ingles a ninos y adolescentes, y en mis tiempos libres disfruto de leer, ver documentales,
+              <p>Soy del partido de Tigre de Buenos Aires. Tengo 22 años, y cuento con conocimientos en ingles intermedio (B2). 
+                Me dedico a enseñar ingles a niños y adolescentes, y en mis tiempos libres disfruto de leer, ver documentales,
                 y ejercitarme como ir al gimnasio o salir a correr.
                 Me considero una persona responsable, organizada y con muchas ganas de aprender y crecer en el ámbito laboral.
                 
@@ -82,8 +80,8 @@
                     <p>GITHUB</p>
                 </div>
             <div class="conocimiento">
-                    <img src="imagen/ingles.jpg" alt="Inglés B1">
-                    <p>Inglés: B1</p>
+                    <img src="imagen/ingles.jpg" alt="Inglés B2">
+                    <p>Inglés: B2</p>
                 </div>
             </div>
         </section>
@@ -94,12 +92,14 @@
                 <article class="proyecto">
                     <h4>Proyecto Sistema de Gestion de Ventas de Tickets de Recitales</h4>
                     <h5>Proyecto Grupal</h5>
-                    <p>Este proyecto consistió en desarrollar un sistema en C++ para la administración de conciertos, con el objetivo de gestionar usuarios, artistas, recintos, eventos y ventas de entradas de manera organizada. Se implementaron funcionalidades de ABML (Alta, Baja, Modificación y Listado) para todas las entidades, así como consultas de disponibilidad de entradas y generación de informes de ventas y asistencia. La interfaz gráfica facilita la interacción del usuario y la operación del sistema. Este trabajo grupal permitió coordinar módulos entre diferentes integrantes, aplicar programación orientada a objetos, manejo de archivos y garantizar la consistencia de la información entre las distintas clases relacionadas.</p>
+                    <p>Este proyecto consistió en desarrollar un sistema en C++ para la administración de conciertos, con el objetivo de gestionar usuarios, artistas, recintos, eventos y ventas de entradas de manera organizada. Se implementaron funcionalidades de ABML (Alta, Baja, Modificación y Listado) para todas las entidades, así como consultas de disponibilidad de entradas y generación de informes de ventas y asistencia. </p>
+                    <p>Este trabajo grupal permitió coordinar módulos entre diferentes integrantes, aplicar programación orientada a objetos, manejo de archivos y garantizar la consistencia de la información entre las distintas clases relacionadas.</p>
                 </article>
                 <article class="proyecto">
                     <h4>Proyecto Sistema de Gestion de Ventas de Tickets de Cine</h4>
                     <h5>Proyecto Individual</h5>
-                    <p>El sistema tiene como objetivo gestionar de manera eficiente la venta de entradas para funciones de cine. Permite administrar usuarios, películas, funciones y entradas disponibles, incluyendo operaciones de compra, todo a través de una interfaz gráfica intuitiva. El proyecto incluye funcionalidades de ABML (Alta, Baja, Modificación y Listado) para las distintas entidades, consultas de funciones disponibles, compra de entradas y generación de informes sobre ventas y asistencia. Este proyecto fue desarrollado íntegramente por mí, lo que me permitió aplicar de manera práctica la programación orientada a objetos, el manejo de archivos y la lógica de control de inventario, fortaleciendo mi autonomía en el desarrollo de sistemas completos. </p>
+                    <p>Este proyecto tambien tuvo como objetivo gestionar de manera eficiente la venta de entradas para funciones de cine. Permite administrar usuarios, películas, funciones y entradas disponibles, incluyendo operaciones de compra. El proyecto incluye funcionalidades de ABML (Alta, Baja, Modificación y Listado) para las distintas entidades, consultas de funciones disponibles, compra de entradas y generación de informes sobre ventas y asistencia. </p> 
+                    <p> Este proyecto fue desarrollado íntegramente por mí, lo que me permitió aplicar de manera práctica la programación orientada a objetos, el manejo de archivos y la lógica de control de inventario, fortaleciendo mi autonomía en el desarrollo de sistemas completos. </p>
                 </article>
             </div>
         </section>
@@ -117,14 +117,14 @@
         </section>
 
         <section id="contacto" class="contacto">
-            <h3>Contacto</h3>
-            <!-- <form id="contactForm">
-                <label>Nombre<br><input type="text" name="nombre" required></label>
-                <label>Email<br><input type="email" name="email" required></label>
-                <label>Mensaje<br><textarea name="mensaje" rows="4" required></textarea></label>
+            <h3>Contactame!</h3>
+            <form id="formularioContacto">
+                <label>Nombre: <br><input type="texto" name="nombre" required></label>
+                <label>Correo: <br><input type="correo" name="correo" required></label>
+                <label>Mensaje: <br><textarea name="mensaje" rows="4" required></textarea></label>
                 <button type="submit">Enviar</button>
                 <p id="formMessage" class="form-message" aria-live="polite"></p>
-            </form> -->
+            </form>
         </section>
     </main>
 
